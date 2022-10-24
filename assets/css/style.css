@@ -2,8 +2,13 @@
     --main-color:rgb(65, 62, 62);
     --secondary-color:aqua;
     --secondary-font: 25px;
-}
+    --gap: 20px;
+    --num-cols: 2;
+    --row-height: 250px;
+    --num-rows: 3;
 
+}
+/* Universal element selector */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +16,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
+/* Styling for header of webpage */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -28,7 +33,7 @@ header h1 {
     color: var(--main-color);
     padding: 5px;
 }
-
+/* Styling for list in the navigation tab */
 .nav-list {
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +44,7 @@ header h1 {
     font-size: 30px;
     align-items: center;
 }
-
+/* styling for the anchors in the navigation tab */
 .nav-list a{
     margin-right: 30px;
     color: var(--secondary-color);
@@ -84,6 +89,7 @@ header h1 {
 section {
     padding: 15px;
 }
+
 .row-container {
     display: flex;
     flex-wrap: wrap;
@@ -121,6 +127,53 @@ section {
     width: 100%;
 }
 
+.image-grid {
+box-sizing: border-box;
+padding: var(--gap);
+display: grid;
+grid-template-columns: repeat(var(--num-cols), 1fr);
+grid-auto-rows: var(--row-height);
+gap: var(--gap);
+flex: auto;
+}
+
+.image-grid figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 4px solid var(--secondary-color);
+}
+
+/* positioning in grid for horiseon html/css and making image have a relative position */
+.large-image {
+    grid-column: span 2;
+    grid-row: span 1;
+    object-fit: cover;
+    position: relative;
+}
+
+/* applying an absolute position to the figcaption of large image with styling */
+.large-image figcaption {
+    position: absolute;
+    top: 50%;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+    border: 4px solid var(--secondary-color);
+}
+
+/* relative positioning for .gallery-image */
+.gallery-image {
+    position: relative;
+}
+
+/* styling for figcaptions of all .gallery-image */
+.gallery-image figcaption {
+    position: absolute;
+    top: 50%;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+    border: 4px solid var(--secondary-color);
+}
 .footer-list {
     display: flex;
     flex-wrap: wrap;
