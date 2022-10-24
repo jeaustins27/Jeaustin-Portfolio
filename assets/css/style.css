@@ -1,0 +1,47 @@
+:root {
+    --main-color:rgb(65, 62, 62);
+    --secondary-color:aqua;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--main-color);
+    justify-content: space-between;
+    padding: 20px 30px 20px 0px;
+    color: white;
+}
+/* My name at top of webpage */
+header h1 {
+font-size: 50px;
+font-weight: bold;
+background-color: var(--secondary-color);
+color: var(--main-color);
+padding: 5px;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 15px;
+    margin-right: 20px;
+    font-size: 30px;
+    align-items: center;
+}
+
+.nav-list a{
+    margin-right: 30px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-bottom: 0.5vh solid;
+}
