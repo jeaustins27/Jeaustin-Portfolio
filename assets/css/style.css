@@ -16,6 +16,8 @@ body {
     font-size: 1.5rem;
     line-height: 1.5;
     margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Styling for header */
@@ -87,19 +89,16 @@ header nav ul li a {
     border: 4px solid var(--secondary-color);
 }
 
-section {
-    padding: 15px;
-}
-
 .card-container {
     --gap: 16px;
     --num-cols: 2;
     --row-height: 300px;
 
     box-sizing: border-box;
-    padding: var(--gap);
-
+    padding: 30px;
     display: grid;
+    max-width: 100%;
+    max-height: 100%
     grid-template-columns: repeat(var(--num-cols), 1fr);
     grid-auto-rows: var(--row-height);
     gap: var(--gap);
@@ -117,11 +116,14 @@ section {
     grid-column: span 2;
     grid-row: span 2;
     border: 6px solid var(--secondary-color);
+    color: white
 }
 
 .bg2 {
     background: url(../images/blue-motherboard.jpg);
     background-size: cover;
+    color: white;
+    background-color: var(var(--secondary-color));
     border: 4px solid var(--secondary-color);
 }
 
@@ -132,58 +134,54 @@ section {
     margin-top: 100px;
 }
 
-.row-container {
+#about-me {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 10px;  
+    flex-flow: row nowrap;
     align-items: center;
-  }
-
-.left-section {
-    display: flex;
-    justify-content: left;
-}
-
-.left-section-title {
-    font-size: 50px;
-    color: var(--main-color);
-    margin: 0 20px 0 80px;
+    justify-content: flex-start;
+    max-height: max-content;
     width: 100%;
 }
 
-.right-section {
+#work {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row nowrap;
     align-items: center;
-    height: 100%;
-    border-left: 3px solid var(--secondary-color);
-    flex: 1 200px;
-}
-
-.right-section p {
-    color: var(--main-color);
-    font-size: var(--secondary-font);
-    text-align: left;
-    margin-left: 30px;
+    justify-content: flex-start;
+    max-height: max-content;
     width: 100%;
 }
 
-.image-grid {
-box-sizing: border-box;
-padding: var(--gap);
-display: grid;
-grid-template-columns: repeat(var(--num-cols), 1fr);
-grid-auto-rows: var(--row-height);
-gap: var(--gap);
-flex: auto;
+#contact-me {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    max-height: max-content;
 }
 
-.image-grid figure > img {
+.contact-me-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.label-left {
+    border-right: 5px solid var(--secondary-color);
+    width: 20vw;
+    align-content: center;
+    justify-content: flex-end;
+    margin-left: 5%;
+    padding-left: 50px;
+}
+
+.label-right {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 4px solid var(--secondary-color);
+}
+
+.label-right p {
+    margin:20px;
 }
 
 /* positioning in grid for horiseon html/css and making image have a relative position */
@@ -216,21 +214,12 @@ flex: auto;
     background-color: var(--secondary-color);
     border: 4px solid var(--secondary-color);
 }
-.footer-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-    /* margin-right: 20px; */
-    align-items: center;
-}
 
-.footer-list a {
-    margin: 0 30px;
-    font-size: var(--secondary-font);
-    color: var(--main-color);
-    text-decoration: none;
-    border-bottom: 0.5vh solid;
-    padding-bottom: 2px;
-    flex: 1 200px;
+footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--main-color);
+    color: var(--secondary-color)
 }
