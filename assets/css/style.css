@@ -119,6 +119,13 @@ header nav ul li a {
     color: white
 }
 
+.quiz-cr8r {
+        background: url(../images/quiz-cr8r-myQuizzes.png);
+        background-size: cover;
+        border: 6px solid var(--secondary-color);
+        color: white
+}
+
 .bg2 {
     background: url(../images/blue-motherboard.jpg);
     background-size: cover;
